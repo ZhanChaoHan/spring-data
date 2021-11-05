@@ -1,0 +1,3 @@
+druidDataSource为主数据源启动加载‘init-data.sql’，‘init-tables.sql’,Tuser
+dbcpSource数据源初始化加载‘dbcp.sql’,Torder
+c3p0Source数据源初始化加载‘c3p0.sql’,Tgoods
