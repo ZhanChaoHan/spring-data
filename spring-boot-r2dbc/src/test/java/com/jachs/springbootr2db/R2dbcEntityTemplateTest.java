@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.r2dbc.core.R2dbcEntityTemplate;
+import org.springframework.data.relational.core.query.Criteria;
+import org.springframework.data.relational.core.query.CriteriaDefinition;
+import org.springframework.data.relational.core.query.Query;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -39,5 +42,15 @@ public class R2dbcEntityTemplateTest {
         flux.subscribe(a->{
                    System.out.println(a.getId()+"\t"+a.getFirstname()+"\t"+a.getLastname());
                 });
+    }
+    //根据id删除
+    @Test
+    public void test5(){
+        r2dbcEntityTemplate.delete(new User("皮皮","","")).block();
+    }
+    //Query条件删除
+    @Test
+    public void test6(){
+        r2dbcEntityTemplate.delete(Query.query(Criteria.where("id").is("ironMan")),User.class).block();
     }
 }
