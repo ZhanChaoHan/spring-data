@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
  * @author zhanchaohan
  */
 @SpringBootTest
-public class Demo1 {
+public class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 

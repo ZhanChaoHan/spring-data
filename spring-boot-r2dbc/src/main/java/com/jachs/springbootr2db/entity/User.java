@@ -1,7 +1,5 @@
 package com.jachs.springbootr2db.entity;
 
-import java.util.Date;
-
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
