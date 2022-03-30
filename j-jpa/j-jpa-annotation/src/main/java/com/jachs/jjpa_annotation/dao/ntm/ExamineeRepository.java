@@ -5,9 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.jachs.jjpa_entity.ntm.Examinee;
 
-
-
-
 /**
  * @author zhanchaohan
  * 

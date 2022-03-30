@@ -27,15 +27,15 @@ public class StudentCardComplexQueryTest {
 	// 单字段查询
 	@Test
 	public void test() {
-		StudentCard sc = studentCardRepository.findBycardName("机随称随");
-		System.out.println(sc.getCardId());
+		StudentCard sc = studentCardRepository.findBycardName("卡称符卡");
+		System.out.println(sc.toString());
 	}
 
 	// 多条件And
 	@Test
 	public void test1() {
 		StudentCard sc = studentCardRepository.findByCardNameAndCardType("机随称随", "学生卡1");
-		System.out.println(sc.getCardId());
+		System.out.println(sc.toString());
 	}
 
 	@Test

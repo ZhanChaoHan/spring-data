@@ -10,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
 import lombok.Data;
 
 /**
@@ -25,7 +26,7 @@ public class Student {
     @Column(name = "studentId",length = 20)
     private String studentId;
     
-    @Column(name = "studentName")
+    @Column(name = "studentName",unique = true)
     private String studentName;
     
     @Column(name = "studentAge")

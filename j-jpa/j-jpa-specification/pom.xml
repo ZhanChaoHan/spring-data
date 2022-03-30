@@ -15,10 +15,6 @@
 	</properties>
 	
 	<dependencies>
-		<dependency>
-		    <groupId>com.jachs</groupId>
-		    <artifactId>j-jpa-entity</artifactId>
-		    <version>${project.version}</version>
-		</dependency>
+		
 	</dependencies>
 </project>

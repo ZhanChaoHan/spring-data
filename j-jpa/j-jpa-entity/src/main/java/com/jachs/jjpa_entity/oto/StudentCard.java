@@ -27,4 +27,10 @@ public class StudentCard {
     
     @Column(name = "cardName",length = 20)
     private String cardName;
+
+	@Override
+	public String toString() {
+		return "StudentCard [cardId=" + cardId + ", cardType=" + cardType + ", cardMonery=" + cardMonery + ", cardName="
+				+ cardName + "]";
+	}
 }
