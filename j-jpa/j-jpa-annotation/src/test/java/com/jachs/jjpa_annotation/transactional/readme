@@ -1,0 +1,4 @@
+@Modifying注解
+1:在@Query注解中，编写JPQL实现DELETE和UPDATE操作的时候，必须加上@modifying注解，以通知Spring Data 这是一个DELETE或UPDATE操作。
+2:UPDATE或者DELETE操作需要使用事务，此时需要定义Service层，在Service层的方法上添加事务操作。
+3:注意JPQL不支持INSERT操作。　
