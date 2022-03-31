@@ -35,7 +35,7 @@ public class StudentCardSimpleQueryTest {
 	public void test3() {
 		List<StudentCard> csList=studentCardRepository.findAll();
 		for (StudentCard studentCard : csList) {
-			System.out.println(studentCard.getCardId());
+			System.out.println(studentCard.toString());
 		}
 	}
 }

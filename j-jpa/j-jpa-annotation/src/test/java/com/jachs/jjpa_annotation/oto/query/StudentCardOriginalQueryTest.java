@@ -23,7 +23,7 @@ public class StudentCardOriginalQueryTest {
 	public void test() {
 		List<StudentCard> scList = studentCardRepository.findByCardTypeAndSort("学生卡1");
 		for (StudentCard studentCard : scList) {
-			System.out.println(studentCard.getCardId());
+			System.out.println(studentCard.toString());
 		}
 	}
 }

@@ -1,4 +1,4 @@
-package com.jachs.jjpa_entity.nto;
+package com.jachs.jjpa_entity.mto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,6 +19,7 @@ import lombok.Data;
 public class Player {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "pID")
     private Long playerId;
     
     @Column(name = "playerUserName")

@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Proxy;
+
 import lombok.Data;
 
 /***
@@ -18,11 +20,12 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name="goods")
+@Proxy(lazy=false)
+@Table(name="j_goods")
 public class Goods {
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 @Column(name = "id")
+	 @Column(name = "g_id")
 	 private Integer id;//id
 	 
 	 @Column(name = "gName",length = 10)
@@ -36,5 +39,11 @@ public class Goods {
 	 
 	 @Column(name = "guaranteeTime")
 	 private Date guaranteeTime;//保质期
+
+	@Override
+	public String toString() {
+		return "Goods [id=" + id + ", gName=" + gName + ", gPrice=" + gPrice + ", manufactureTime=" + manufactureTime
+				+ ", guaranteeTime=" + guaranteeTime + "]";
+	}
 	 
 }

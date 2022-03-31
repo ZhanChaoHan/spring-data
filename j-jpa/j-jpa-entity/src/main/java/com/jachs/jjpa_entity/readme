@@ -1,0 +1,21 @@
+一:@OneToOne,@OneToMany,@ManyToOne,@ManyToMany
+
+targetEntity:（可选）关联的对象Class
+CascadeType:（可选）级联操作，默认不操作
+fetch:（可选）是否应延迟关联，懒加载或立即加载
+optional:（可选）关联是否可选。如果设定如果为false，则必须始终存在非null关系。
+mappedBy:（可选）拥有关系的字段。这元素仅在反向上指定（非所有）协会的一方。
+orphanRemoval:（可选）是否将删除操作应用于具有已从关系中删除，并将删除操作级联到这些实体。
+
+二:@JoinColumn
+
+name:
+referencedColumnName:
+unique:（可选）属性是否为唯一键。
+nullable:（可选）外键列是否可为空
+insertable:（可选）该列是否包含在持久化生成的SQL INSERT语句提供者。
+updatable:（可选）该列是否包含在持久化生成的SQL UPDATE语句提供者。
+columnDefinition:（可选）在以下情况下使用的SQL片段：正在为列生成DDL。<p>默认为该列生成的SQL。
+table:（可选）包含的表的名称
+foreignKey:（可选）用于指定或控制表生成生效时的外键约束。如果未指定此元素，持久性提供程序的默认外键策略将适用。
+

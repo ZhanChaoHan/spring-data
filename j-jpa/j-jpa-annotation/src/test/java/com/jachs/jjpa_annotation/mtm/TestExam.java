@@ -1,4 +1,4 @@
-package com.jachs.jjpa_annotation.ntm;
+package com.jachs.jjpa_annotation.mtm;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.jachs.jjpa_annotation.dao.ntm.ExamRepository;
 import com.jachs.jjpa_annotation.dao.ntm.ExamineeRepository;
-import com.jachs.jjpa_entity.ntm.Exam;
-import com.jachs.jjpa_entity.ntm.Examinee;
+import com.jachs.jjpa_entity.mtm.Exam;
+import com.jachs.jjpa_entity.mtm.Examinee;
 
 /**
  * @author zhanchaohan

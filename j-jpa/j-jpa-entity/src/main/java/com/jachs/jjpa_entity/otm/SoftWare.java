@@ -1,4 +1,4 @@
-package com.jachs.jjpa_entity.otn;
+package com.jachs.jjpa_entity.otm;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,6 +16,7 @@ import lombok.Data;
 @Table(name="SoftWare")
 public class SoftWare {
     @Id
+    @Column(name = "softWareId")
     private String softWareId;
     
     @Column(name = "cId")

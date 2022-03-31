@@ -1,10 +1,11 @@
-package com.jachs.jjpa_entity.nto;
+package com.jachs.jjpa_entity.mto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -29,5 +30,6 @@ public class VideoGame {
     private Integer gamePrice;
     
     @ManyToOne(targetEntity = Player.class,optional = true)
+    @JoinColumn(name="pID")
     private Player player;
 }

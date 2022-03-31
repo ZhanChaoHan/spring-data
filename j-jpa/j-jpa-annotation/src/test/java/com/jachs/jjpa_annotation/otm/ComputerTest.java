@@ -1,4 +1,4 @@
-package com.jachs.jjpa_annotation.otn;
+package com.jachs.jjpa_annotation.otm;
 
 
 import java.util.ArrayList;
@@ -13,9 +13,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.jachs.jjpa_annotation.dao.otn.ComputerRepository;
-import com.jachs.jjpa_entity.otn.Computer;
-import com.jachs.jjpa_entity.otn.SoftWare;
+import com.jachs.jjpa_annotation.dao.otm.ComputerRepository;
+import com.jachs.jjpa_entity.otm.Computer;
+import com.jachs.jjpa_entity.otm.SoftWare;
 
 /**
  * @author zhanchaohan
@@ -81,7 +81,7 @@ public class ComputerTest {
 		DateUtils du = new DateUtils();
 		Date date = new Date();
 
-		for (int nn = 0; nn < 50; nn++) {
+		for (int nn = 0; nn < 10; nn++) {
 			Computer computer = new Computer();
 
 			computer.setComputerId(sId + nn);

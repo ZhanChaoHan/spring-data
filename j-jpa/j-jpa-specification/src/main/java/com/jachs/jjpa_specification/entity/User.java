@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Proxy;
+
 import lombok.Data;
 
 /***
@@ -17,7 +19,8 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name="user")
+@Proxy(lazy=false)
+@Table(name="j_user")
 public class User {
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)

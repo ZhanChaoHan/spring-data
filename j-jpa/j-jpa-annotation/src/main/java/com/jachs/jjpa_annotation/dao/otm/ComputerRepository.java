@@ -1,11 +1,11 @@
-package com.jachs.jjpa_annotation.dao.otn;
+package com.jachs.jjpa_annotation.dao.otm;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
-import com.jachs.jjpa_entity.otn.Computer;
+import com.jachs.jjpa_entity.otm.Computer;
 
 /**
  * @author zhanchaohan

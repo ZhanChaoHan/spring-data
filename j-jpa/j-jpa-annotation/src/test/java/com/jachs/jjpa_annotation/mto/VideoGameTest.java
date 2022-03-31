@@ -1,14 +1,13 @@
-package com.jachs.jjpa_annotation.nto;
-
+package com.jachs.jjpa_annotation.mto;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.jachs.jjpa_annotation.dao.nto.PlayerRepository;
-import com.jachs.jjpa_annotation.dao.nto.VideoGameRepository;
-import com.jachs.jjpa_entity.nto.Player;
-import com.jachs.jjpa_entity.nto.VideoGame;
+import com.jachs.jjpa_annotation.dao.mtm.PlayerRepository;
+import com.jachs.jjpa_annotation.dao.mtm.VideoGameRepository;
+import com.jachs.jjpa_entity.mto.Player;
+import com.jachs.jjpa_entity.mto.VideoGame;
 
 /**
  * @author zhanchaohan
@@ -31,31 +30,16 @@ public class VideoGameTest {
         playerRepository.save ( p1 );
         
         VideoGame vg = new VideoGame ();
-        vg.setGameName ( "" );
-        vg.setGamePrice ( 5412 );
-
-       
-        vg.setPlayer ( p1 );
-        videoGameRepository.save ( vg );
-    }
-    @Test
-    public void testAddMany() {
-        Player p1 = new Player ();
-        p1.setLevel ( 3 );
-        p1.setPlayerUserName ( "Level3玩家" );
-
-        playerRepository.save ( p1 );
-        
-        VideoGame vg = new VideoGame ();
         vg.setGameName ( "LOL" );
         vg.setGamePrice ( 5412 );
-
+        vg.setPlayer ( p1 );
+        
         VideoGame vg1 = new VideoGame ();
         vg1.setGameName ( "OverWatch" );
-        vg1.setGamePrice ( 2754 );
-        
-        vg.setPlayer ( p1 );
+        vg1.setGamePrice ( 5112 );
         vg1.setPlayer ( p1 );
+        
+        
         videoGameRepository.save ( vg );
         videoGameRepository.save ( vg1 );
     }

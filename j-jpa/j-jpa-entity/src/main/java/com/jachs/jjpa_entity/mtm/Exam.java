@@ -1,4 +1,4 @@
-package com.jachs.jjpa_entity.ntm;
+package com.jachs.jjpa_entity.mtm;
 
 import java.util.Set;
 

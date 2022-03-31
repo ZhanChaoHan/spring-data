@@ -1,11 +1,9 @@
 package com.jachs.jjpa_specification.entity;
 
-
-import java.util.Date;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,30 +16,29 @@ import org.hibernate.annotations.Proxy;
 import lombok.Data;
 
 /***
- * 用户详情表
+ * 订单表详情
  * @author zhanchaohan
  *
  */
 @Data
 @Entity
 @Proxy(lazy=false)
-@Table(name="j_user_info")
-public class UserInfo {
-	 @Id
+@Table(name="j_order_info")
+public class OrderInfo {
+	@Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 @Column(name = "u_info_id")
-	 private Integer id;//id
+	 @Column(name = "o_info_Id")
+	 private Integer infoId;//id
 	 
-	 @Column(name = "phoneNum",length = 11)
-	 private Long phoneNum;//电话号码
+	 @Column(name = "num")
+	 private Integer Num;//多少件
 	 
-	 @Column(name = "register_time")
-	 private Date registerTime;//注册时间
+	 @OneToOne(cascade = CascadeType.ALL,targetEntity = Order.class,fetch = FetchType.EAGER)
+	 @JoinColumn(name="oID")
+	 private Order order;//订单id
 	 
-	 @Column(name = "address")
-	 private String Address;//住址
-
-	 @OneToOne(cascade = CascadeType.ALL,targetEntity = User.class)
-	 @JoinColumn(name="fk_uId",referencedColumnName="userId",nullable=false)
-	 private User uId;//用户id外键
+	 @OneToOne(cascade = CascadeType.ALL,targetEntity = Goods.class,fetch = FetchType.EAGER)
+	 @JoinColumn(name = "gID")
+	 private Goods goods;//商品id
+	 
 }

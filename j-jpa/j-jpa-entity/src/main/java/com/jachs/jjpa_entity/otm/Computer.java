@@ -1,4 +1,4 @@
-package com.jachs.jjpa_entity.otn;
+package com.jachs.jjpa_entity.otm;
 
 import java.util.Date;
 import java.util.Set;
@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -36,6 +37,7 @@ public class Computer {
     @Column(name = "computerPrice")
     private Long computerPrice;
     
-    @OneToMany(targetEntity = SoftWare.class,mappedBy = "cId",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = SoftWare.class,fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinColumn(name = "cFKId" )
     private Set<SoftWare> softWares;
 }
