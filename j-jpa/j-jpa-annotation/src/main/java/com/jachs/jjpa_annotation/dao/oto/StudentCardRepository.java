@@ -42,4 +42,5 @@ public interface StudentCardRepository extends JpaRepository<StudentCard,String>
 	@Query(value = "select * from studentcard where cardType=?1 order by cardId desc" ,nativeQuery = true)
 	List<StudentCard> findByCardTypeAndSort(String cardTy);
 
+
 }

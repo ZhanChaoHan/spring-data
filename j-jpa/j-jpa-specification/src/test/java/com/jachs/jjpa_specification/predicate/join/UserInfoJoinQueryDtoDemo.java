@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.jachs.jjpa_specification.dao.UserInfoRepository;
 import com.jachs.jjpa_specification.dto.join.UserJoinQueryDTO;
 import com.jachs.jjpa_specification.entity.UserInfo;
-import com.jachs.jjpa_specification.mapper.UserMapper;
+import com.jachs.jjpa_specification.mapper.UserInfoMapper;
 import com.jachs.jjpa_specification.utill.QueryHelp;
 
 /***
@@ -22,7 +22,7 @@ public class UserInfoJoinQueryDtoDemo {
 	@Autowired
 	private UserInfoRepository userRepository;
 	@Autowired
-	private UserMapper userMapper;
+	private UserInfoMapper userMapper;
 	
 	@Test
 	public void test1() {

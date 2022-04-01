@@ -13,5 +13,5 @@ import com.jachs.jjpa_specification.entity.vo.UserInfoVO;
  *
  */
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
-public interface UserMapper extends BaseMapper<UserInfoVO, UserInfo>{
+public interface UserInfoMapper extends BaseMapper<UserInfoVO, UserInfo>{
 }

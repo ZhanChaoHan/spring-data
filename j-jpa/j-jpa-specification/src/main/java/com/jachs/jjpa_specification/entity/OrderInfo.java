@@ -25,7 +25,7 @@ import lombok.Data;
 @Proxy(lazy=false)
 @Table(name="j_order_info")
 public class OrderInfo {
-	@Id
+	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 @Column(name = "o_info_Id")
 	 private Integer infoId;//id

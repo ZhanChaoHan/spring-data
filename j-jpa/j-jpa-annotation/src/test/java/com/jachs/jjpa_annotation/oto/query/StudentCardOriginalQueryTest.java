@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.jachs.jjpa_annotation.dao.oto.StudentCardRepository;
+import com.jachs.jjpa_annotation.vo.StudentCardVo;
 import com.jachs.jjpa_entity.oto.StudentCard;
 
 /***
