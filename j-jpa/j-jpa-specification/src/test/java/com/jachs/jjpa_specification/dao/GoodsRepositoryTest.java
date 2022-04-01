@@ -20,8 +20,11 @@ public class GoodsRepositoryTest {
 	@Autowired
 	private GoodsRepository goodsRepository;
 	
-	String []goodsName=new String[] {"苹果","薯片","菠萝","老坛酸菜牛肉面","皮皮虾",
-			"黄瓜","麻瓜","西瓜","牛肉","羊肉"};
+	String []goodsName=new String[] {
+			"苹果","薯片","菠萝","老坛酸菜牛肉面","皮皮虾",
+			"黄瓜","麻瓜","西瓜","牛肉","羊肉",
+			"地雷","苦瓜","多肉","苹果树","苹果树枝","苹果果","苹A果",
+			"苹B果","苹C果","苹D果","苹E果","苹F果"};
 	
 	//初始化商品
 	@Test

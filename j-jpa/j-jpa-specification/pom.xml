@@ -12,9 +12,20 @@
 	<name>复杂查询</name>
 	<properties>
 		<java.version>1.8</java.version>
+		<mapstruct.version>1.4.2.Final</mapstruct.version>
 	</properties>
 	
 	<dependencies>
-		
+		<!-- mapstruct -->
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>${mapstruct.version}</version>
+		</dependency>
 	</dependencies>
 </project>

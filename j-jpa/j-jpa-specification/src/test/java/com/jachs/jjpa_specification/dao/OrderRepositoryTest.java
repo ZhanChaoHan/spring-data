@@ -29,21 +29,24 @@ public class OrderRepositoryTest {
 	
 	Random radom=new Random();
 	
+	//初始化订单
 	@Test
 	public void test1() {
-		Order order=new Order();
-		
-		order.setFinalState(0);//成功订单
-		order.setOrderId("test1");
-		order.setUId(userRepository.findAll().get(0));
-		orderRepository.save(order);
-		
-		Order order1=new Order();
-		
-		order1.setFinalState(1);//失败订单
-		order1.setOrderId("test2");
-		order1.setUId(userRepository.findAll().get(0));
-		orderRepository.save(order1);
+		userRepository.findAll().forEach(user->{
+			Order order=new Order();
+			
+			order.setFinalState(0);//成功订单
+			order.setOrderId(user.getUserId()+"_Success");
+			order.setUId(user);
+			orderRepository.save(order);
+			
+			Order order1=new Order();
+			
+			order1.setFinalState(1);//失败订单
+			order1.setOrderId(user.getUserId()+"_Fail");
+			order1.setUId(user);
+			orderRepository.save(order1);
+		});
 	}
 	int infoId=1;
 	private void initOrderInfo(Goods goods,Order order) {

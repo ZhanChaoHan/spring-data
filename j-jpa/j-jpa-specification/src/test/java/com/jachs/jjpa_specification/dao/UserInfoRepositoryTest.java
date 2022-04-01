@@ -35,5 +35,19 @@ public class UserInfoRepositoryTest {
 		uInfo.setUId(user);
 		
 		userInfoRepository.save(uInfo);
+		
+		User user1=new User();
+		
+		user1.setUserName("alien");
+		user1.setUserPwd("jchab@qq.com");
+		
+		UserInfo uInfo1=new UserInfo();
+		
+		uInfo1.setPhoneNum(22389767465L);
+		uInfo1.setRegisterTime(new Date());
+		uInfo1.setAddress("天津");
+		uInfo1.setUId(user1);
+		
+		userInfoRepository.save(uInfo1);
 	}
 }
