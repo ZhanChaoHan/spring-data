@@ -1,0 +1,8 @@
+singleServerConfig:
+  password: null
+  address: "redis://127.0.0.1:6379"
+  database: 1
+threads: 0
+nettyThreads: 0
+codec: !<org.redisson.codec.FstCodec> {}
+transportMode: "NIO"
