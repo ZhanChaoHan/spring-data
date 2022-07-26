@@ -25,7 +25,7 @@ public class SpecificationFactoryTest {
 	@Test
 	public void test1() {
 		// 构造条件
-		Specification specification = SpecificationFactory.eq("NickName", "四十二");
+		Specification specification = SpecificationFactory.eq("NickName", "Pontus");
 		// 打印结果
 		List<Person> systemUserList = personRepository.findAll(specification);
 
