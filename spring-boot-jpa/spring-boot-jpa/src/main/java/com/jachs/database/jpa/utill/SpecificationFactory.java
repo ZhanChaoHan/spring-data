@@ -7,6 +7,11 @@ import java.util.Date;
 
 import org.springframework.data.jpa.domain.Specification;
 
+/***
+ * 
+ * @author zhanchaohan
+ *
+ */
 public class SpecificationFactory {
 	// 时区对象
 	private static final ZoneOffset ZONE_OFFSET = ZoneOffset.of("+8");

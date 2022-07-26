@@ -1,11 +1,14 @@
 package com.jachs.database.jpa.entity.oto.dto;
 
-
-
 import com.jachs.database.jpa.utill.Query;
 
 import lombok.Data;
 
+/***
+ * 
+ * @author zhanchaohan
+ *
+ */
 @Data
 public class StudentDto {
 	/** 模糊 */

@@ -22,8 +22,7 @@ public interface StudentConverter {
 	
 	@Mappings({
         @Mapping(source = "student.studentName", target = "studentName"),
-        @Mapping(source = "studentCard.cardName", target = "cardName"),
-        @Mapping(source = "studentCard.cardMonery", target="cardMonery")
+        @Mapping(source = "studentCard.cardName", target = "cardName")
     })
 	StudentModel stuToModel(Student student);
 	

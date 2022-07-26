@@ -9,6 +9,11 @@ import org.apache.commons.lang3.StringUtils;
 import java.lang.reflect.Field;
 import java.util.*;
 
+/***
+ * 
+ * @author zhanchaohan
+ *
+ */
 //@Slf4j
 @SuppressWarnings({ "unchecked", "all" })
 public class QueryHelp {
